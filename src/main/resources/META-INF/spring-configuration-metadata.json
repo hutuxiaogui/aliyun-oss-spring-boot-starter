@@ -1,0 +1,257 @@
+{
+  "groups": [
+    {
+      "name": "aliyun.oss",
+      "type": "com.hutuxiaogui.autoconfigure.aliyun.oss.properties.AliyunOssProperties",
+      "sourceType": "com.hutuxiaogui.autoconfigure.aliyun.oss.properties.AliyunOssProperties"
+    },
+    {
+      "name": "aliyun.oss.aliyun-oss-client-config",
+      "type": "com.hutuxiaogui.autoconfigure.aliyun.oss.config.AliyunOssClientConfig",
+      "sourceType": "com.hutuxiaogui.autoconfigure.aliyun.oss.properties.AliyunOssProperties",
+      "sourceMethod": "getAliyunOssClientConfig()"
+    },
+    {
+      "name": "aliyun.oss.names.key",
+      "type": "java.util.Map<java.lang.String,com.hutuxiaogui.autoconfigure.aliyun.oss.config.AliyunOssConfig>",
+      "sourceType": "com.hutuxiaogui.autoconfigure.aliyun.oss.properties.AliyunOssProperties",
+      "sourceMethod": "getNames()"
+    }
+  ],
+  "properties": [
+    {
+      "name": "aliyun.oss.enable",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.hutuxiaogui.autoconfigure.aliyun.oss.properties.AliyunOssProperties",
+      "description": "是否开启 oss 自动装配，默认为 true",
+      "defaultValue": true
+    },
+    {
+      "name": "aliyun.oss.bucket-name",
+      "type": "java.lang.String",
+      "sourceType": "com.hutuxiaogui.autoconfigure.aliyun.oss.properties.AliyunOssProperties",
+      "description": "存储空间名称"
+    },
+    {
+      "name": "aliyun.oss.endpoint",
+      "type": "java.lang.String",
+      "sourceType": "com.hutuxiaogui.autoconfigure.aliyun.oss.properties.AliyunOssProperties",
+      "description": "访问域名"
+    },
+    {
+      "name": "aliyun.oss.security-token",
+      "type": "java.lang.String",
+      "sourceType": "com.hutuxiaogui.autoconfigure.aliyun.oss.properties.AliyunOssProperties",
+      "description": "安全令牌"
+    },
+    {
+      "name": "aliyun.oss.access-key-id",
+      "type": "java.lang.String",
+      "sourceType": "com.hutuxiaogui.autoconfigure.aliyun.oss.properties.AliyunOssProperties",
+      "description": "访问密钥，用于标识用户"
+    },
+    {
+      "name": "aliyun.oss.access-key-secret",
+      "type": "java.lang.String",
+      "sourceType": "com.hutuxiaogui.autoconfigure.aliyun.oss.properties.AliyunOssProperties",
+      "description": "访问密钥，用户用于加密签名字符串和OSS用来验证签名字符串的密钥"
+    },
+    {
+      "name": "aliyun.oss.names",
+      "type": "java.util.Map<java.lang.String,com.hutuxiaogui.autoconfigure.aliyun.oss.config.AliyunOssConfig>",
+      "sourceType": "com.hutuxiaogui.autoconfigure.aliyun.oss.properties.AliyunOssProperties",
+      "description": "多实例"
+    },
+    {
+      "name": "aliyun.oss.aliyun-oss-client-config.cname-exclude-list",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "com.hutuxiaogui.autoconfigure.aliyun.oss.config.AliyunOssClientConfig",
+      "description": "设置不可变排除的CName列表 ---- 任何以该列表中的项目结尾的域都不会进行Cname解析。"
+    },
+    {
+      "name": "aliyun.oss.aliyun-oss-client-config.connection-request-timeout",
+      "type": "java.lang.Integer",
+      "sourceType": "com.hutuxiaogui.autoconfigure.aliyun.oss.config.AliyunOssClientConfig",
+      "description": "从连接池中获取连接的超时时间（单位：毫秒）。默认不超时。"
+    },
+    {
+      "name": "aliyun.oss.aliyun-oss-client-config.connection-tTL",
+      "type": "java.lang.Long",
+      "sourceType": "com.hutuxiaogui.autoconfigure.aliyun.oss.config.AliyunOssClientConfig",
+      "description": "连接TTL (生存时间)。Http连接由连接管理器用TTL缓存。"
+    },
+    {
+      "name": "aliyun.oss.aliyun-oss-client-config.connection-timeout",
+      "type": "java.lang.Integer",
+      "sourceType": "com.hutuxiaogui.autoconfigure.aliyun.oss.config.AliyunOssClientConfig",
+      "description": "建立连接的超时时间（单位：毫秒）。默认为50000毫秒。"
+    },
+    {
+      "name": "aliyun.oss.aliyun-oss-client-config.crc-check-enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.hutuxiaogui.autoconfigure.aliyun.oss.config.AliyunOssClientConfig",
+      "description": "是否在上传和下载时启用CRC校验，默认启用",
+      "defaultValue": true
+    },
+    {
+      "name": "aliyun.oss.aliyun-oss-client-config.default-headers",
+      "type": "java.util.Map<java.lang.String,java.lang.String>",
+      "sourceType": "com.hutuxiaogui.autoconfigure.aliyun.oss.config.AliyunOssClientConfig",
+      "description": "设置默认的http头。所有请求头将自动添加到每个请求中。如果在请求中也指定了相同的请求头，则默认的标头将被覆盖。"
+    },
+    {
+      "name": "aliyun.oss.aliyun-oss-client-config.idle-connection-time",
+      "type": "java.lang.Long",
+      "sourceType": "com.hutuxiaogui.autoconfigure.aliyun.oss.config.AliyunOssClientConfig",
+      "description": "连接空闲超时时间，超时则关闭连接（单位：毫秒）。默认为60000毫秒。"
+    },
+    {
+      "name": "aliyun.oss.aliyun-oss-client-config.log-connection-pool-stats",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.hutuxiaogui.autoconfigure.aliyun.oss.config.AliyunOssClientConfig",
+      "description": "是否开启日志记录连接池统计信息",
+      "defaultValue": false
+    },
+    {
+      "name": "aliyun.oss.aliyun-oss-client-config.max-connections",
+      "type": "java.lang.Integer",
+      "sourceType": "com.hutuxiaogui.autoconfigure.aliyun.oss.config.AliyunOssClientConfig",
+      "description": "允许打开的最大HTTP连接数。默认为1024"
+    },
+    {
+      "name": "aliyun.oss.aliyun-oss-client-config.max-error-retry",
+      "type": "java.lang.Integer",
+      "sourceType": "com.hutuxiaogui.autoconfigure.aliyun.oss.config.AliyunOssClientConfig",
+      "description": "请求失败后最大的重试次数。默认3次。"
+    },
+    {
+      "name": "aliyun.oss.aliyun-oss-client-config.protocol",
+      "type": "com.aliyun.oss.common.comm.Protocol",
+      "sourceType": "com.hutuxiaogui.autoconfigure.aliyun.oss.config.AliyunOssClientConfig",
+      "description": "连接OSS所采用的协议（HTTP或HTTPS），默认为HTTP。"
+    },
+    {
+      "name": "aliyun.oss.aliyun-oss-client-config.proxy-domain",
+      "type": "java.lang.String",
+      "sourceType": "com.hutuxiaogui.autoconfigure.aliyun.oss.config.AliyunOssClientConfig",
+      "description": "代理服务器的域，该域可以执行NTLM认证"
+    },
+    {
+      "name": "aliyun.oss.aliyun-oss-client-config.proxy-host",
+      "type": "java.lang.String",
+      "sourceType": "com.hutuxiaogui.autoconfigure.aliyun.oss.config.AliyunOssClientConfig",
+      "description": "代理服务器主机地址。"
+    },
+    {
+      "name": "aliyun.oss.aliyun-oss-client-config.proxy-password",
+      "type": "java.lang.String",
+      "sourceType": "com.hutuxiaogui.autoconfigure.aliyun.oss.config.AliyunOssClientConfig",
+      "description": "代理服务器验证的密码。"
+    },
+    {
+      "name": "aliyun.oss.aliyun-oss-client-config.proxy-port",
+      "type": "java.lang.Integer",
+      "sourceType": "com.hutuxiaogui.autoconfigure.aliyun.oss.config.AliyunOssClientConfig",
+      "description": "代理服务器端口。",
+      "defaultValue": -1
+    },
+    {
+      "name": "aliyun.oss.aliyun-oss-client-config.proxy-username",
+      "type": "java.lang.String",
+      "sourceType": "com.hutuxiaogui.autoconfigure.aliyun.oss.config.AliyunOssClientConfig",
+      "description": "代理服务器验证的用户名。"
+    },
+    {
+      "name": "aliyun.oss.aliyun-oss-client-config.proxy-workstation",
+      "type": "java.lang.String",
+      "sourceType": "com.hutuxiaogui.autoconfigure.aliyun.oss.config.AliyunOssClientConfig",
+      "description": "代理主机的NTLM身份验证服务器"
+    },
+    {
+      "name": "aliyun.oss.aliyun-oss-client-config.redirect-enable",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.hutuxiaogui.autoconfigure.aliyun.oss.config.AliyunOssClientConfig",
+      "description": "是否开启HTTP重定向。 说明: Java SDK 3.10.1及以上版本支持设置是否开启HTTP重定向，默认开启。",
+      "defaultValue": true
+    },
+    {
+      "name": "aliyun.oss.aliyun-oss-client-config.request-timeout",
+      "type": "java.lang.Integer",
+      "sourceType": "com.hutuxiaogui.autoconfigure.aliyun.oss.config.AliyunOssClientConfig",
+      "description": "请求超时时间，单位：毫秒。默认情况下是5分钟。"
+    },
+    {
+      "name": "aliyun.oss.aliyun-oss-client-config.request-timeout-enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.hutuxiaogui.autoconfigure.aliyun.oss.config.AliyunOssClientConfig",
+      "description": "是否启用请求超时校验。默认情况下，它是禁用的。",
+      "defaultValue": false
+    },
+    {
+      "name": "aliyun.oss.aliyun-oss-client-config.signature-version",
+      "type": "com.aliyun.oss.common.comm.SignVersion",
+      "sourceType": "com.hutuxiaogui.autoconfigure.aliyun.oss.config.AliyunOssClientConfig",
+      "description": "所有请求设置签名版本"
+    },
+    {
+      "name": "aliyun.oss.aliyun-oss-client-config.sld-enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.hutuxiaogui.autoconfigure.aliyun.oss.config.AliyunOssClientConfig",
+      "description": "是否开启二级域名（Second Level Domain）的访问方式，默认不开启。",
+      "defaultValue": false
+    },
+    {
+      "name": "aliyun.oss.aliyun-oss-client-config.slow-requests-threshold",
+      "type": "java.lang.Long",
+      "sourceType": "com.hutuxiaogui.autoconfigure.aliyun.oss.config.AliyunOssClientConfig",
+      "description": "设置慢请求的延迟阈值。如果请求的延迟大于延迟，则将记录该请求。默认情况下，阈值为5分钟。"
+    },
+    {
+      "name": "aliyun.oss.aliyun-oss-client-config.socket-timeout",
+      "type": "java.lang.Integer",
+      "sourceType": "com.hutuxiaogui.autoconfigure.aliyun.oss.config.AliyunOssClientConfig",
+      "description": "Socket层传输数据的超时时间（单位：毫秒）。默认为50000毫秒。"
+    },
+    {
+      "name": "aliyun.oss.aliyun-oss-client-config.support-cname",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.hutuxiaogui.autoconfigure.aliyun.oss.config.AliyunOssClientConfig",
+      "description": "是否支持CNAME作为Endpoint，默认支持CNAME。",
+      "defaultValue": false
+    },
+    {
+      "name": "aliyun.oss.aliyun-oss-client-config.tick-offset",
+      "type": "java.lang.Long",
+      "sourceType": "com.hutuxiaogui.autoconfigure.aliyun.oss.config.AliyunOssClientConfig",
+      "description": "设置OSS服务端时间和本地时间之间的差异，以毫秒为单位。",
+      "defaultValue": 0
+    },
+    {
+      "name": "aliyun.oss.aliyun-oss-client-config.use-reaper",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.hutuxiaogui.autoconfigure.aliyun.oss.config.AliyunOssClientConfig",
+      "description": "是否使用com.aliyun.oss.common.comm.IdleConnectionReaper管理过期连接,默认开启"
+    },
+    {
+      "name": "aliyun.oss.aliyun-oss-client-config.use-system-property-values",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.hutuxiaogui.autoconfigure.aliyun.oss.config.AliyunOssClientConfig",
+      "description": "是否使用系统属性值",
+      "defaultValue": false
+    },
+    {
+      "name": "aliyun.oss.aliyun-oss-client-config.user-agent",
+      "type": "java.lang.String",
+      "sourceType": "com.hutuxiaogui.autoconfigure.aliyun.oss.config.AliyunOssClientConfig",
+      "description": "用户代理，指HTTP的User-Agent头。默认为aliyun-sdk-java。"
+    },
+    {
+      "name": "aliyun.oss.aliyun-oss-client-config.verify-s-s-l-enable",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.hutuxiaogui.autoconfigure.aliyun.oss.config.AliyunOssClientConfig",
+      "description": "是否开启SSL证书校验。 说明: Java SDK 3.10.1及以上版本支持设置是否开启SSL证书校验，默认开启。",
+      "defaultValue": true
+    }
+  ],
+  "hints": []
+}
