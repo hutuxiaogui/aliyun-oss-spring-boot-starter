@@ -128,7 +128,7 @@ aliyun.oss.names.aliyunOssClient1.aliyun-oss-client-config. *=
 ```java
     // 原阿里云提供的对象OSS 操作对应的API参考阿里云提供的文档
     OSS oss = aliyunOssClient.oss();
-    // 使用是时需要对配置的 bucketName 做拼路径操作，单独写了方法调用
+    // 使用时需要对配置的 bucketName 做拼路径操作，单独写了方法调用
     String bucketName = aliyunOssClient.getBucketName();
     // 可以获取到生成实例时添加的配置信息
     AliyunOssProperties aliyunOssProperties  =  aliyunOssClient.getAliyunOssProperties();
