@@ -6,7 +6,7 @@
 [Gitee](https://gitee.com/hutuxiaogui/aliyun-oss-spring-boot-starter)
 
 ## 开始使用
-jar包已推送至maven中央仓库，可通过如下方式导入 aliyun-oss-spring-boot-starter 依赖，请使用 1.0.1 及以上版本
+jar 包已推送至 maven 中央仓库，可通过如下方式导入 aliyun-oss-spring-boot-starter 依赖，请使用 1.0.1 及以上版本
 
 ```xml
 <dependency>
